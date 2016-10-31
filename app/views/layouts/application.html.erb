@@ -12,6 +12,15 @@
     <h1 class='pull-left'>Tumblful</h1>
   </a>
   <%= button_to("Sign out", destroy_user_session_path, :method => :delete, :class => "pull-right") if user_signed_in? %>
+
+  <ul>
+    <!-- link_to is a built in helper function that displays the string that follows and path after -->
+    <!-- root_path is / -->
+    <li><%= link_to "Home", root_path %></li>
+    <!-- links to /image_links -->
+    <li><%= link_to "All ImageLinks", image_links_path %></li>
+    <li><%= link_to "All TextPosts", text_posts_path %></li>
+  </ul>
 </nav>
 <%= notices %>
 <div class='main-content'>
